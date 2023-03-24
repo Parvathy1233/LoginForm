@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Home page</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: azure;
+        }
+
+        button {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 250px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome </h1>
+    <img src="https://cdn-icons-png.flaticon.com/128/4532/4532510.png" alt="image loading...">
+    <div id="welcome"> <button id="logout">Logout</button></div>
+
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#logout").click(function () {
+            window.location.href = "login.html"
+        })
+    })
+
+</script>

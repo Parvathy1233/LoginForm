@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name" />
+        <input type="password" placeholder="password" />
+        <input type="text" placeholder="email address" />
+        <button>create</button>
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+      <form class="login-form">
+        <h1>Login</h1>
+        <input type="text" placeholder="username" id="username" name="usr" required>
+        <input type="password" placeholder="password" id="password" name="psw" required>
+        <button type="button" id="login">Login </button>
+        <div id="msg"></div>
+        <!-- <button id="logout">Logout</button> -->
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+    var username = "admin";
+    var password = "1234"
+    $("#login").click(function () {
+      if ($('#password').val() == "") {
+        alert("Please enter password.");
+      };
+    });
+    $(document).ready(function () {
+      $("#login").click(function () {
+        var usernameFromUserTyped = $("#username").val();
+        var passwordFromUserTyped = $("#password").val();
+        console.log(usernameFromUserTyped)
+        if (usernameFromUserTyped == username && passwordFromUserTyped == password) {
+          console.log("Welcome")
+          window.location.href = "home.html";
+        }
+        else{
+
+           alert("Wrong credential");
+        }
+      })
+    });
+   
+  });
+
+</script>
